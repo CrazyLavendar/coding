@@ -33,12 +33,11 @@ public:
         Client c(name);
         clients.push_back(c);
         cout << " created client " << name << endl;
-        cout << " New codespace" << endl;
-        cout << " New codespace" << endl;
     }
 };
 
 Server* Server::instance = new Server();
+
 int main(){
 
     Server::instance->createClient("A");

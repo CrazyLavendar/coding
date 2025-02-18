@@ -21,8 +21,6 @@ static Singleton* getInstance(){
 };
 
 
-
-
 int main(){
 
     Singleton* instance1 = Singleton::getInstance();

@@ -25,8 +25,8 @@ class Child : public Base{
 int main() {
     // Write C++ code here
     Base* b = new Child();
-    b->fun();
-    b->print();
+    b->fun(); // Prints base class
+    b->print(); // Prints child class
 
     return 0;
 }

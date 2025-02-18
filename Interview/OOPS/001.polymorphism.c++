@@ -15,7 +15,6 @@ class Derived : public Base{
     {
         cout << "I am Derived " <<  " " << endl; 
     }
-
 };
 
 int main(){

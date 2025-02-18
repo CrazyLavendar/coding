@@ -16,8 +16,7 @@ public:
 int main(){
     cout << "operator overload" << endl; 
     Point a(1,2), b (10,4);
-    Point c ;
-     a + b;
+    Point c = a + b;
 
     cout << c.x << " " << c.y << endl;
     return 0;

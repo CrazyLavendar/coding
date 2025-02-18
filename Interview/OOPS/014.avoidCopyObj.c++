@@ -12,7 +12,6 @@ private:
         x  = rhs.x;
         return x;
     }
-
 };
 
 int main(){

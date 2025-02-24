@@ -38,6 +38,7 @@ public:
 };
 
 Server* Server::instance = new Server();
+
 int main(){
 
     Server::instance->createClient("A");

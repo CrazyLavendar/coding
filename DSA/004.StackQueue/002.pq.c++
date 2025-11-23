@@ -30,7 +30,7 @@ int main(){
 
     sort(v.begin() , v.end(), Compare());
 
-    for( int x : v){
+    for(int x : v){
         cout << x  << " " << endl;
     }
 

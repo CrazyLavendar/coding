@@ -42,6 +42,7 @@ int main(){
     start_time = system_clock::now();   
     thread t1(funEven, start, end);
     thread t2(funOdd, start, end);
+    t1(funEven, start, end);
     t1.join();
     t2.join();
     end_time = system_clock::now();

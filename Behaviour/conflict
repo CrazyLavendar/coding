@@ -1,0 +1,36 @@
+✅ STAR Script 1 — Conflict with Stakeholder (Foveation Design)
+Situation
+
+I was reviewing a proposed foveated rendering design for an XR product where the GPU team suggested processing three identical camera streams and doing cropping and downscaling entirely on GPU.
+
+Task
+
+I was responsible for ensuring the solution delivered optimal performance and stability without increasing system cost.
+
+Action
+
+Reviewed the design deeply and proposed an alternate architecture where the camera subsystem performs cropping and downscaling, and GPU only stitches
+
+Faced resistance because stakeholders believed this would increase CPU cycles
+
+Collected performance benchmarks for both approaches using profiling tools
+
+Added stability testing scenarios reflecting real user movement patterns
+
+Engaged stakeholders using data and customer usage patterns to align on priorities
+
+Result
+
+Hybrid approach was adopted: GPU handles static scenarios; camera handles motion scenarios
+
+Achieved ~15% CPU reduction in motion cases while maintaining performance
+
+Improved stability significantly in real usage conditions
+
+Solution deployed to production and appreciated by the client
+
+Successfully resolved conflict through data-driven collaboration
+
+Leadership Principles Shown: Dive Deep, Ownership, Earn Trust, Customer Obsession, Deliver Results
+
+

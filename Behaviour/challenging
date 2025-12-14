@@ -1,0 +1,34 @@
+
+
+
+
+✅ STAR Script 3 — Challenging Project (XR Silicon Bring-Up Under Extreme Deadline)
+Situation
+
+I led the camera bring-up for a new XR silicon platform that introduced a dual-mode camera feature. Early builds were highly unstable with crashes, freezes, deadlocks, and black-screen issues.
+
+Task
+
+Deliver a stable bring-up within a 2–3 day deadline, while ensuring deep root-cause fixes rather than temporary patches.
+
+Action
+
+Systematically reproduced and intentionally triggered failures to capture stack traces and RAM signatures
+
+Performed deep-dive debugging across software, driver, and system layers instead of only triaging logs
+
+Collaborated closely with cross-functional teams and guided root-cause analysis
+
+Onboarded two junior engineers to parallelize execution while I retained technical and decision leadership
+
+Documented issues, fixes, and learnings to enable faster future bring-ups
+
+Result
+
+Successfully completed bring-up within the deadline
+
+Resolved multiple stability and reliability issues permanently
+
+Created reusable debugging documentation to accelerate future bring-ups
+
+Appreciated by stakeholders for technical leadership under pressure

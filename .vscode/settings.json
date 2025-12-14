@@ -83,6 +83,35 @@
         "numeric": "cpp",
         "random": "cpp",
         "stop_token": "cpp",
-        "unordered_set": "cpp"
-    }
+        "unordered_set": "cpp",
+        "map": "cpp",
+        "set": "cpp",
+        "shared_mutex": "cpp",
+        "list": "cpp",
+        "regex": "cpp",
+        "valarray": "cpp",
+        "ranges": "cpp",
+        "stacktrace": "cpp",
+    },
+    "editor.semanticHighlighting.enabled": false,
+
+    "editor.semanticTokenColorCustomizations": {
+    "enabled": false
+    },
+    "editor.quickSuggestions": {
+        "comments": "off",
+        "strings": "off",
+        "other": "off"
+    },
+    "editor.parameterHints.enabled": false,
+    "editor.hover.enabled": "off",
+    "editor.lightbulb.enabled": "off",
+    "editor.suggestOnTriggerCharacters": false,
+    "editor.inlineSuggest.enabled": false,
+"editor.tokenColorCustomizations": { "textMateRules": [] },
+"C_Cpp.enhancedColorization": "disabled",
+"C_Cpp.semanticHighlighting": false,
+"C_Cpp.intelliSenseEngine": "disabled",
+
+"editor.bracketPairColorization.enabled": false
 }

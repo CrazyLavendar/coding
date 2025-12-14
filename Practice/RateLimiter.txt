@@ -1,0 +1,71 @@
+
+
+enum subscrption{
+    default = 0,
+    prime,
+    ultraprime
+}
+
+class Client;
+typedef long long ll;
+
+struct API{
+    Client client;
+    ll time;
+};
+
+typedef long long timeToken;
+
+class Server{
+
+public:
+    Server* static getInstance(){
+        static Server instance;
+        return instance;
+    }
+    void addClient(string name, subscription subs){
+        Client* c = new Client;
+        c->subs = subs;
+        c->name = name;
+
+        map[name] = {c, 0};
+    }
+
+    bool allowAPI(timeToken exit, timeToken new, ll maxAllowed){
+        
+    }
+
+    void refereshToken(){
+
+    }
+
+    bool ProcessAPI(API api){
+        // if deafult 100 request allowed
+        // prime 1000 allowed
+        // ultraprime 100000 allowed
+        Client* c = api.client;
+        bool allow =  allowAPI(map_[c->name]->second, api.time);
+    }
+private:
+    // 
+    map<string, pair<Client*, timeToken>> map_;
+};
+
+class Client{
+
+public:
+    string name;
+    subscrption subs;
+
+    Client(string name_, subscription subs_) : name(name_), subs(subs_) {
+        Server.getInstance->addClient(this);
+    }
+
+    bool SubmitAPI(){
+        API api;
+        api.client = this;
+        api.time.  = time.now();
+        return Server.getInstance->ProcessAPI(api);
+    }
+
+};

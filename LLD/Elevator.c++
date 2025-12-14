@@ -109,7 +109,7 @@ int main(){
     // ins->setFloor(e, 3);
 
     t1.join();
-    t2.join();
+    t2.join();t
     t3.join();
     t4.join();
     t5.join();

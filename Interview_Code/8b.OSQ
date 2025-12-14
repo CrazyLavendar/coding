@@ -1,0 +1,49 @@
+Consider the following concurrent code:
+int value = 0;
+bool flag = false;
+
+void writer() {
+    value = 99;      // A
+    flag = true;     // B
+}
+
+void reader() {
+    if (flag) {      // C
+        use(value);  // D
+    }
+}
+Answer:
+Is this program allowed to print an old value or an uninitialized value?
+    int value = 0;
+    bool flag = false; 
+    Above values are initialized. So "uninitialized value" not possible.
+    If reader execution happens first, use(value) will have use(0);
+Does the code contain a data race?
+    Yes. " use(value);  // D" execution depends on "flag = true;     // B"
+Is the behavior undefined under the C++ memory model?
+    Yes, reader and writer execution happens concurrently without locks it is undefined.
+Give a corrected version using only std::atomic (no mutex).
+int value = 0;
+bool flag = false;
+atomic<bool> canRead{false} // false -> allow writers, 
+atomic<bool> canWrite{false}
+
+void writer() {
+    canRead.load(true, memory_order_relaxed);
+    // spin until 
+    while(true == canWrite.load(memory_order_acquire));
+        value = 99;      // A
+        flag = true;     // B
+    canRead.store(false);
+}
+
+void reader() {
+    canWrite.load(true, memory_order_relaxed);
+    while(true == canRead.load(memory_order_acquire));
+    if (flag) {      // C
+        use(value);  // D
+    }
+    canWrite.store(false);
+}
+Explain why your fix establishes a happens-before relationship.
+To avoid race condition

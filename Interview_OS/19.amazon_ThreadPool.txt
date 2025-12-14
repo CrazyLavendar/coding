@@ -1,0 +1,70 @@
+
+class ThreadPool{
+
+    ThreadPool(int numThreads) : n (numThreads){
+        stop = false;
+        for(int i = 0; i < N; i++){
+            thread_List.emplace_back(workerPool, i);
+        }
+    }
+
+    ~ThreadPool(){
+        stop = true;
+        cv.notify_all();
+        for(int i = 0; i < N; i++){
+            thread_List[i].join();
+        }
+    }
+
+    void SumbitTask(){
+        unique_lock<mutex> ul;
+        function<void()> task = &performtask();
+        tasks.push(task);
+
+        cv.notify_one();
+    }
+
+    
+
+    private:
+
+    void workerPool(int id){
+
+        while(true){
+            function<void()> task;
+            {
+                unique_lock<mutex> ul;
+
+                if(stop){
+                    cv.notify_all();
+                    break;
+                }
+
+                // check task is not empty
+                cv.wait([]{
+                    return tasks.size() > 0;
+                });
+
+                task = tasks.front();
+                tasks.pop();
+            }
+            task();
+        }
+
+    }
+
+    void performtask(){
+        // Do some task
+    }
+
+
+    // class members
+    mutex m;
+    condition_variable cv;
+    int N; // numThreads
+    vector<thread> thread_List;
+    queue<function<void()>> tasks;
+    bool stop;
+}
+
+

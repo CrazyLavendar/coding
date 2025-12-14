@@ -2,9 +2,7 @@
 #include<queue>
 using namespace std;
 
-class Compare{
-
-    public:
+struct Compare{
     bool  operator () (int a, int b) {
         if(a < b)
         return true;

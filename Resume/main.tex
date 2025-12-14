@@ -1,0 +1,163 @@
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage[left=0.4 in,top=0.4in,right=0.4 in,bottom=0.4in]{geometry} % Document margins
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}} 
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+
+\name{Vimal Kumar} % Your name
+\address{\bf Senior Software Engineer, Qualcomm}
+% You can merge both of these into a single line, if you do not have a website.
+\address{+91 xxxxxxxx \\ 
+\href{mailto:xxxxxx}{xxxxxxx} \\ \href{https://www.linkedin.com/in/jayamvimal/}{LinkedIn}  }  %
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	OBJECTIVE
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{ABOUT}
+
+Software Engineer with $\sim$8 years of experience in system software, camera pipelines, and Android middleware. 
+Skilled in system design, performance optimization, and debugging, with hands-on experience delivering 
+high-performance features for embedded devices. Strong background in leading technical teams 
+and driving end-to-end solutions.
+
+
+\end{rSection}
+
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+
+{\bf Master of Computer Science and Engineering}, National Institute of Technology, Warangal \hfill {2020 - 2022}\\
+\smallskip \\
+{\bf Bachelor of Information Technology}, Anna University, Chennai \href{https://www.youtube.com/watch?v=XCFW81O_ROs}{[UG Best Project Award - 2015]}\hfill {2012 - 2016}
+%Minor in Linguistics \smallskip \\
+%Member of Eta Kappa Nu \\
+%Member of Upsilon Pi Epsilon \\
+\end{rSection}
+
+
+%----------------------------------------------------------------------------------------
+% TECHNICAL STRENGTHS	
+%----------------------------------------------------------------------------------------
+\begin{rSection}{SKILLS}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+
+Languages & C++ 11/14/17 (Expert), Python, JavaScript, C\# (Intermediate) \\
+
+System & Android HAL, Linux Internals, Multithreading, IPC, Memory Management, Full Stack  \\
+
+Domains & Embedded Software, Camera Pipelines, XR/AR/VR Applications, Middleware, Perf Optimization \\
+
+Tools & Git, ADB, GDB, Perf, Valgrind, OpenCV, TensorFlow, Android Studio, Jira \\
+
+Soft Skills & Architecture Design, Code Review, Debugging, Technical Leadership, Cross-team Collaboration \\
+
+\end{tabular}
+
+\end{rSection}
+
+\begin{rSection}{EXPERIENCE}
+
+\textbf{Senior Software Engineer} \hfill July 2022 -- Present \\
+Qualcomm \hfill \textit{Hyderabad}
+\begin{itemize}
+    \itemsep -3pt
+    \item Designed and optimized Dynamic Foveated Camera Resolution Control on Halliday and Matrix chipsets, improving camera bandwidth utilization and system power efficiency.
+    \item Developed, optimized, and debugged Android HAL and middleware components for XR smart-glass devices, working closely with camera, sensor, and display subsystems.
+    \item Worked extensively on C++ system components, memory management, thread scheduling, and cross-process communication within the Android framework.
+    \item Performed performance profiling, trace analysis, and low-level debugging using ADB, GDB, Perf, and vendor-specific tools.
+    \item Supported camera bring-up, CSI/IPU pipeline validation, buffer management, and image quality tuning for early silicon.
+    \item Built automation frameworks using Python and Shell scripting; contributed to CTS validation suite for XR camera and sensor features.
+    \item Collaborated with SoC, firmware, and kernel teams for issue triage, root-cause analysis, and integration validation.
+\end{itemize}
+
+\textbf{Technical Lead Engineer} \hfill Oct 2016 -- Aug 2020 \\
+TCS Research and Development (XR Lab) \hfill \textit{Chennai, Singapore}
+\begin{itemize}
+    \itemsep -3pt
+    \item Led development of XR/AR/VR applications across smart-glass, mobile, and 6DOF VR headsets, ensuring high performance on constrained embedded hardware.
+    \item Built C++ and Unity-based rendering pipelines, sensor fusion logic, and latency-optimized interaction flows.
+    \item Worked on computer vision modules, integrating ML/TensorFlow models for gesture recognition and object detection.
+    \item Delivered multiple PoCs for enterprise clients (airlines, healthcare) involving IoT integration, real-time data syncing, and low-latency XR interaction.
+    \item Mentored junior engineers, reviewed system architecture, and owned feature delivery across mobile, web, and embedded stacks.
+\end{itemize}
+
+\end{rSection} 
+
+%----------------------------------------------------------------------------------------
+%	TOP PROJECTS (ATS-OPTIMIZED FOR HW/SW EMBEDDED, XR, COMPUTER VISION ROLES)
+%----------------------------------------------------------------------------------------
+\begin{rSection}{TOP PROJECTS}
+\vspace{-1.25em}
+
+\item \textbf{Low Frame-Rate Camera Optimization}  
+{Implemented dynamic frame-rate control for embedded camera sensors using stream-off / power-off sequencing across request/result threads in the Android HAL. Reduced sensor power draw and system thermal load while preserving QoS for capture pipelines. [Power consumption reduced by 15%]}
+
+\item \textbf{AI Copilot with Always Sensing Camera}  
+{Architected and implemented an Always-On (AON) camera + on-device AI copilot for continuous image description and context-aware alerts. Optimized sensor sampling and inference scheduling to minimize power and CPU/GPU utilization on constrained SoC platforms.}
+
+\item \textbf{Smartglass Security Pipeline}  
+{Designed secure, low-latency sensor-to-application streaming on ARM-based smart-glass platforms. Implemented encrypted buffer transport, HAL-level access control, and secure IPC to prevent unauthorized buffer access while maintaining real-time throughput.
+
+\item \textbf{Foveated Capture \& ISP-Level Cropping for XR}  
+{Built foveation-driven capture that performs region-of-interest cropping in ISP/Sensor hardware to eliminate unnecessary frame transfers to GPU. Reduced memory-bandwidth usage and GPU load to extend battery life on XR headsets and smart glasses. [Reduced GPU and CPU overhead by directly foveating in ISP, Metrics depends on User's movement]}
+
+\item \textbf{VHAB — Assistive XR Platform for Special-Needs Therapy}  
+{Led development of a VR-based physiotherapy and behavioral-training platform integrating embedded VR clients, IoT sensors, and MERN analytics dashboard. Delivered computer-vision–based exercise tracking and automated progress analytics for deployments in therapy centers and homes. [Deployed in 5+ sites;  participation improved a lot]}
+
+\end{itemize}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	AWARDS (CONCISE, HYPERLINKS, CONTEXT)
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Awards} 
+\begin{itemize}
+
+\item \href{https://www.linkedin.com/posts/ayushi-manoria-094a83178_qualcomm-qbuzz2024-xr-activity-7333786063821242368-SKF9?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB-NCXIBjdnoYSgckGOzHNbCtMl4SGQ7v0s}{\textbf{AIBuzz Award — 2024}}  
+Awarded for an AI + XR virtual-assistant prototype that provides multimodal motion guidance for rehabilitation. Recognized for technical innovation and practical impact. [Confidential metrics available on request.]
+
+\item \href{https://drive.google.com/file/d/1rXnLbqZIzRqTLbpFZkbQ1MeoSK2LpRcQ/view}{\textbf{On-the-Spot Award — 2017}}  
+Granted by Singapore Airlines for delivery of a low-latency smart-glass solution used in operational trials.
+
+\item \href{https://drive.google.com/file/d/1_Ffyj-XwmqnWTwdu9XUKIrCuG-ngw0wL/view}{\textbf{TMA CSR Award — 2018}}  
+Recognized by the Governor of Kerala for VHAB — an XR + IoT healthcare initiative for special-needs children demonstrating social impact and technical execution.
+
+\end{itemize}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS & IP (CONFIDENTIALITY-PRESERVING)
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Publications \& Intellectual Property} 
+\begin{itemize}
+
+\item \textbf{Journal Publication — XR for Remote MRO Assistance} \\ 
+Published \textit{“Support for MRO Remote Assistance through Extended Reality (XR)”} in \textit{Computers \& Industrial Engineering} (CAIE-D-22-02027). Paper presents scalable XR workflows for maintenance, remote collaboration, and operational-efficiency improvements. [Add measurable outcomes: task-time ↓ XX\%]
+
+\item \textbf{Invention Disclosure — XR + AI Intelligent Assistive System} \\ 
+Filed an internal Invention Disclosure (IDF) at Qualcomm for an XR+AI assistive platform focused on real-time multimodal guidance and on-device inference. Details are confidential; high-level summary included to demonstrate IP activity and invention lifecycle experience.
+
+\end{itemize}
+\end{rSection}
+
+
+%----------------------------------------------------------------------------------------
+%\begin{rSection}{Leadership} 
+%\begin{itemize}
+%    \item Admin for the \href{https://discord.com/invite/WWbjEaZ}{FAANGPath Discord community} with over 6000+ job seekers and industry mentors. Actively involved in facilitating online events, career conversations, and more alongside other admins and a team of volunteer moderators! 
+%\end{itemize}
+%
+%
+%\end{rSection}
+
+
+\end{document}

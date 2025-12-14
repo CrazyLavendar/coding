@@ -18,6 +18,7 @@ Move to thread
 #include <iostream>
 #include<vector>
 #include<map>
+#include <thread>
 using namespace std;
 
 enum NewsType{

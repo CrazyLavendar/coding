@@ -91,6 +91,7 @@
         "regex": "cpp",
         "valarray": "cpp",
         "ranges": "cpp",
+<<<<<<< HEAD
         "stacktrace": "cpp",
     },
     "editor.semanticHighlighting.enabled": false,
@@ -114,4 +115,8 @@
 "C_Cpp.intelliSenseEngine": "disabled",
 
 "editor.bracketPairColorization.enabled": false
+=======
+        "stacktrace": "cpp"
+    }
+>>>>>>> refs/remotes/origin/main
 }

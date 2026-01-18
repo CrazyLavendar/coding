@@ -47,7 +47,11 @@ bool contains(string s, int index, Node* curr);
 bool contains(string s);// — return true if s exists.
 int startsWith(string prefix, int index, Node* curr); 
 int startsWith(string prefix); // — return the number of strings in the trie that start with prefix.
+<<<<<<< HEAD
 string longestCommonPrefix();// — return the longest common prefix of all strings currently in the trie.
+=======
+void longestCommonPrefix();// — return the longest common prefix of all strings currently in the trie.
+>>>>>>> refs/remotes/origin/main
 void listWithPrefix(string prefix, int limit);// — return up to limit strings that start with prefix, in lexicographic order.
 };
 

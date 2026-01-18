@@ -64,7 +64,11 @@ private:
 };
 
 void TicketLock::lock(){
+<<<<<<< HEAD
     int curr_ticket_local = curr_ticket.fetch_add(1, memory_order_relaxed);
+=======
+    int curr_ticket_local = curr_ticket.fetch_add(1, memory_order_release);
+>>>>>>> refs/remotes/origin/main
     while(true){
         if(curr_ticket_local == next_ticket.load(memory_order_acquire)){
             break;

@@ -11,7 +11,6 @@ struct Compare{
 };
 
 
-
 int main(){
 
     priority_queue<int, vector<int> , Compare> pq;

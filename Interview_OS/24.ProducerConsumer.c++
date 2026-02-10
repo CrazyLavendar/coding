@@ -9,29 +9,27 @@ class Solution{
 private:
 
 int N;
-int curr;
 mutex m;
 condition_variable cv;
 vector<int> buffers;
-long id;
+int head, tail;
 
 public:
 
     Solution(int N){
-        id = 0;
-        curr = 0;
+        head = 0;
+        tail = 0;
         buffers.resize(N, -1);
     }
 
     void put(int item){
         unique_lock<mutex> ul(m);
-        id++;
-        curr++;
         cv.wait(ul, [&]{
-            return (curr < N); // full
+            return ((head - tail) < N); // full logic
         });
 
-        buffers[(curr - 1) % N] = item; // since array starts 0
+        buffers[head % N] = item;
+        head++; // ready for next
 
         cv.notify_all();
     }
@@ -41,11 +39,11 @@ public:
         {
             unique_lock<mutex> ul(m);
             cv.wait(ul, [&]{
-                return (curr > 0);
+                return (head > tail); // has some buffers
             });
             
-            res = buffers[(curr - 1) % N];
-            curr--;
+            res = buffers[tail % N];
+            tail++;
             cv.notify_all();
         }
         return res;
